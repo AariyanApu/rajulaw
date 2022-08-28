@@ -22,11 +22,23 @@
             <img src="img/logo.png" alt="Rajulaw logo" class="logo" />
             <!-- <img src="resources/img/logo.png" alt="Rajulaw logo" class="logo-black"> -->
             <ul class="main-nav js--main-nav">
-              <li><a href="#features">Who We Are</a></li>
+              <li><a href="#about-us">Who We Are</a></li>
               <li><a href="#works">Legal Fees</a></li>
               <li><a href="#cities">Blog</a></li>
-              <li><a href="#plans">Contact Us</a></li>
+              <li><a href="#contact">Contact Us</a></li>
               <li><a href="#plans">faq</a></li>
+
+              <li>
+                <a class="sticky-nav-extra" href="#practice-areas"
+                  >PRACTICE AREAS</a
+                >
+              </li>
+              <li><a class="sticky-nav-extra" href="#why-us">why us ?</a></li>
+              <li>
+                <a class="sticky-nav-extra" href="#testimonials"
+                  >TESTIMONIALS</a
+                >
+              </li>
             </ul>
             <a class="mobile-nav-icon js--nav-icon">
               <i class="fa-solid fa-bars"></i>
@@ -35,10 +47,10 @@
         </nav>
         <div class="header-text-box">
           <h1>Global Immigration <br />& Employment Law Services</h1>
-          <div class="header--button header--button-primary">
+          <div class="main--button main--button-primary header--button">
             Schedule a free appointment
           </div>
-          <div class="header--button header--button-secondary">
+          <div class="main--button main--button-secondary header--button-secondary">
             I want to know more
           </div>
         </div>
@@ -47,7 +59,7 @@
 
     <!-- Section Who we are -->
 
-    <section>
+    <section class="js--section-about-us" id="about-us">
       <div class="container">
         <div class="row">
           <h2>WHO WE ARE</h2>
@@ -90,7 +102,7 @@
       </div>
     </section>
 
-    <section class="practice--areas">
+    <section class="practice--areas" id="practice-areas">
       <div class="container">
         <div class="row">
           <h2>PRACTICE AREAS</h2>
@@ -211,7 +223,7 @@
             href="https://docs.google.com/forms/d/e/1FAIpQLSfceTZ0bgBtiXC5YbbXg3BeFnB5GsvN76nT2Eu3s5Se5gY1_Q/viewform"
             target="_blank"
             rel="noopener noreferrer"
-            class="header--button practice--button"
+            class="main--button main--button-primary practice--button"
             >Click here for Free NIW Evaluation</a
           >
         </div>
@@ -266,14 +278,16 @@
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            class="header--button profile--button"
+            class="main--button main--button-secondary profile--button"
             >Meet Our Team
           </a>
         </div>
       </div>
     </section>
 
-    <section class="success--rate">
+    <!-- * Success Rate Sections -->
+
+    <section class="success--rate" id="why-us">
       <div class="container">
         <div class="row">
           <h2>WHY CLIENTS CHOOSE US?</h2>
@@ -324,7 +338,7 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
       <div class="container">
         <div class="row">
           <h2>Testimonials</h2>
@@ -536,7 +550,7 @@
       </div>
     </section>
 
-    <section class="footer">
+    <section class="footer" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -545,7 +559,7 @@
             <br />
             <a href="mailto:info@rajulaw.com"> info@rajulaw.com </a>
           </div>
-          <div class="col-md-4 ">
+          <div class="col-md-4">
             <h2>Mailing Address</h2>
             <p>
               Mahajan Law LLC <br />
@@ -555,47 +569,50 @@
           </div>
           <div class="col-md-4">
             <div class="social--media">
-            <h2>Catch us</h2>
-            <ul>
-              <li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-square-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-square-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-square-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+              <h2>Catch us</h2>
+              <ul>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><i class="fa-brands fa-square-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><i class="fa-brands fa-square-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><i class="fa-brands fa-square-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="http://" target="_blank" rel="noopener noreferrer"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
       </div>
-
     </section>
 
-    <section class="credit--area ">
-      
-        <div class="container">
+    <section class="credit--area">
+      <div class="container">
         <div class="row">
-         
-            <span>©2022 Mahajan Law LLC || Designed by <a href="https://aariyanapu.com/" target="_blank" rel="noopener noreferrer">Aariyan Apu</a> || Developed by ... </span>
-
+          <span
+            >©2022 Mahajan Law LLC || Designed by
+            <a
+              href="https://aariyanapu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Aariyan Apu</a
+            >
+            || Developed by ...
+          </span>
         </div>
       </div>
-      
     </section>
 
     <!-- bootstrap and jquery -->
