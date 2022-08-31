@@ -58,7 +58,10 @@ section {
   }
 }
 
-h1, h2, h4, h5 {
+h1,
+h2,
+h4,
+h5 {
   text-transform: uppercase;
 }
 
@@ -136,6 +139,7 @@ li {
 }
 .main--button-primary:hover {
   border: 1px solid var(--primary-color);
+  color: var(--white-color);
 }
 
 .main--button-secondary {
@@ -166,6 +170,10 @@ li {
 }
 
 .profile--button {
+  margin: 0 auto;
+}
+
+.tech--button {
   margin: 0 auto;
 }
 
@@ -284,7 +292,6 @@ header {
   background-position: center;
   height: 100vh;
   background-attachment: fixed;
-  position: relative;
 }
 header .header-text-box {
   position: absolute;
@@ -302,6 +309,14 @@ header .header-text-box {
 @media only screen and (max-width: 767px) {
   header .header-text-box {
     padding: 0 4%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header {
+    background-size: auto;
+    background-position: center;
+    height: 100vh;
+    background-attachment: scroll;
   }
 }
 
@@ -527,10 +542,12 @@ header .header-text-box {
 .footer a {
   font-size: 80%;
   color: var(--gray-color);
+  transition: all 0.2s ease-in-out;
 }
 .footer a:hover {
   color: var(--secondary-color);
   text-decoration: none;
+  transform: scale(1.1);
 }
 @media only screen and (max-width: 767px) {
   .footer a {
@@ -563,4 +580,75 @@ header .header-text-box {
 }
 .credit--area a {
   color: var(--gray-color);
+}
+
+.faq {
+  background-color: var(--lightGray-color);
+}
+.faq li a:link,
+.faq li a:visited {
+  color: var(--gray-color);
+}
+.faq .logo {
+  filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
+}
+.faq .faq--button {
+  text-align: left;
+  border-radius: 10px;
+  font-size: 90%;
+}
+.faq .social--media a:hover {
+  color: var(--secondary-color);
+}
+
+.team {
+  background-color: var(--lightGray-color);
+  text-align: center;
+}
+.team .card {
+  border: 1px solid var(--primary-color);
+  margin-top: 32px;
+}
+.team .card p {
+  margin: 0;
+  font-size: 80%;
+  color: var(--primary-color);
+}
+.team .card img {
+  width: 60%;
+  margin: 40px auto 0 auto;
+  border-radius: 4px;
+}
+.team .card a {
+  font-size: 150%;
+  margin-right: 16px;
+  transition: all 0.2s ease-in-out;
+  color: var(--gray-color);
+}
+.team .card a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 767px) {
+  .team .card a {
+    font-size: 200%;
+  }
+}
+.team h5 {
+  margin: 0;
+  font-size: 100%;
+}
+.team li a:link,
+.team li a:visited {
+  color: var(--gray-color);
+}
+.team .logo {
+  filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
+}
+.team .social--media {
+  text-align: center;
+}
+.team .social--media a:hover {
+  color: var(--secondary-color);
 }/*# sourceMappingURL=style.css.map */

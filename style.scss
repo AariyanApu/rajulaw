@@ -53,7 +53,10 @@ section {
 }
 
 // * -------------- Reuseable components ------------
-h1,h2,h4,h5{
+h1,
+h2,
+h4,
+h5 {
   text-transform: uppercase;
 }
 
@@ -65,7 +68,7 @@ h1 {
   word-spacing: 4px;
   letter-spacing: 1px;
   font-weight: 200;
- 
+
   @media only screen and (max-width: 767px) {
     font-size: 180%;
     margin-bottom: 30px;
@@ -75,7 +78,6 @@ h1 {
 h2 {
   margin: 0 auto 10px auto;
 }
-
 
 ul {
   list-style: none;
@@ -135,6 +137,7 @@ li {
   color: var(--white-color);
   &:hover {
     border: 1px solid var(--primary-color);
+    color: var(--white-color);
   }
 }
 
@@ -166,6 +169,9 @@ li {
 }
 
 .profile--button {
+  margin: 0 auto;
+}
+.tech--button{
   margin: 0 auto;
 }
 
@@ -290,18 +296,15 @@ li {
 //* ---------------  Header ------------
 
 header {
-  background-image: -webkit-linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(img/bg.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/bg.jpg);
+  
+  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/bg.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
   background-attachment: fixed;
-  position: relative;
+  
+
   .header-text-box {
     position: absolute;
     width: 1140px;
@@ -317,7 +320,16 @@ header {
     }
     @media only screen and (max-width: 767px) {
       padding: 0 4%;
+      
     }
+  }
+  @media only screen and (max-width: 767px) {
+
+    background-size: auto;
+    background-position: center;
+    height: 100vh;
+    background-attachment: scroll;
+    
   }
 }
 
@@ -388,19 +400,15 @@ header {
     }
 
     .content {
-      
-
-        li {
-          display: block;
-          font-size: 85%;
-        }
-      
+      li {
+        display: block;
+        font-size: 85%;
+      }
 
       h5 {
         margin-top: 25px;
         margin-bottom: 10px;
         font-size: 25px;
-        
       }
     }
   }
@@ -498,7 +506,6 @@ header {
   }
 
   h5 {
-    
     font-size: 120%;
     @media only screen and (max-width: 767px) {
       font-size: 80%;
@@ -525,7 +532,7 @@ header {
   }
 }
 
-// *-----------  ART & TECH --------
+// *---------------  ART & TECH ---------------
 
 .art--tech {
   background-color: var(--lightGray-color);
@@ -535,7 +542,6 @@ header {
     margin: 20px auto 0 auto;
   }
   h4 {
-    
     font-size: 105%;
   }
   p {
@@ -546,14 +552,13 @@ header {
   }
 }
 
-// *-----------  Footer --------
+// *-----------------  Footer -------------
 
 .footer {
   padding: 40px 0 10px 0;
 
   h2 {
     font-size: 130%;
-   
 
     margin: 0;
     @media only screen and (max-width: 767px) {
@@ -574,9 +579,11 @@ header {
   a {
     font-size: 80%;
     color: var(--gray-color);
+    transition: all 0.2s ease-in-out;
     &:hover {
       color: var(--secondary-color);
       text-decoration: none;
+      transform: scale(1.1);
     }
     @media only screen and (max-width: 767px) {
       font-size: 100%;
@@ -609,5 +616,96 @@ header {
   }
   a {
     color: var(--gray-color);
+  }
+}
+
+// *-----------  FAQ --------
+
+.faq {
+  background-color: var(--lightGray-color);
+  li {
+    a:link,
+    a:visited {
+      color: var(--gray-color);
+    }
+  }
+  .logo {
+    filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg)
+      contrast(100%);
+  }
+  .faq--button {
+    text-align: left;
+    border-radius: 10px;
+    font-size: 90%;
+  }
+  .social--media {
+    a {
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
+
+// *----------- Team --------
+
+.team {
+  background-color: var(--lightGray-color);
+  text-align: center;
+  .card {
+    border: 1px solid var(--primary-color);
+    margin-top: 32px;
+    p {
+      margin: 0;
+      font-size: 80%;
+      color: var(--primary-color);
+    }
+
+    img {
+      width: 60%;
+      margin: 40px auto 0 auto;
+      border-radius: 4px;
+    }
+
+    a {
+      font-size: 150%;
+      margin-right: 16px;
+      transition: all 0.2s ease-in-out;
+
+      color: var(--gray-color);
+      &:hover {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transform: scale(1.1);
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 200%;
+      }
+    }
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 100%;
+  }
+
+  li {
+    a:link,
+    a:visited {
+      color: var(--gray-color);
+    }
+  }
+  .logo {
+    filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg)
+      contrast(100%);
+  }
+
+  .social--media {
+    text-align: center;
+    a {
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
   }
 }
