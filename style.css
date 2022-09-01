@@ -6,7 +6,7 @@
   --black-color: #030303;
   --gray-color: #555;
   --lightGray-color: #f4f4f4;
-  --dark-color:#091b2b;
+  --dark-color: #091b2b;
 }
 
 * {
@@ -322,12 +322,23 @@ header .header-text-box {
     padding: 0 4%;
   }
 }
+@media screen and (min-width: 2000px) {
+  header .header-text-box {
+    height: 850px;
+    top: 35%;
+  }
+}
 @media only screen and (max-width: 767px) {
   header {
     background-size: auto;
     background-position: center;
     height: 100vh;
     background-attachment: scroll;
+  }
+}
+@media screen and (min-width: 2000px) {
+  header {
+    height: 850px;
   }
 }
 
