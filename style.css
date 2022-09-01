@@ -6,6 +6,7 @@
   --black-color: #030303;
   --gray-color: #555;
   --lightGray-color: #f4f4f4;
+  --dark-color:#091b2b;
 }
 
 * {
@@ -177,6 +178,13 @@ li {
   margin: 0 auto;
 }
 
+.faq--button {
+  text-align: left;
+  border-radius: 10px;
+  font-size: 90%;
+  color: var(--gray-color);
+}
+
 .logo {
   height: 50px;
   width: auto;
@@ -249,11 +257,11 @@ li {
   left: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(74, 141, 183, 0.8235294118);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  border: 1px solid var(--primary-color);
 }
 .sticky .main-nav {
   margin-top: 18px;
@@ -265,12 +273,15 @@ li {
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
   padding: 5px 0;
-  color: var(--brown-color);
+}
+.sticky .main-nav li a:link:hover, .sticky .main-nav li a:link:active,
+.sticky .main-nav li a:visited:hover,
+.sticky .main-nav li a:visited:active {
+  border-bottom: 2px solid var(--white-color);
 }
 .sticky .logo {
   margin-top: 10px;
   margin-left: 30px;
-  filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
 }
 .sticky .sticky-nav-extra {
   display: inline-block;
@@ -518,6 +529,7 @@ header .header-text-box {
 }
 
 .footer {
+  font-family: "Playfair Display";
   padding: 40px 0 10px 0;
 }
 .footer h2 {
@@ -592,11 +604,6 @@ header .header-text-box {
 .faq .logo {
   filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
 }
-.faq .faq--button {
-  text-align: left;
-  border-radius: 10px;
-  font-size: 90%;
-}
 .faq .social--media a:hover {
   color: var(--secondary-color);
 }
@@ -651,4 +658,110 @@ header .header-text-box {
 }
 .team .social--media a:hover {
   color: var(--secondary-color);
+}
+
+.pricing {
+  background-color: var(--lightGray-color);
+}
+.pricing li a:link,
+.pricing li a:visited {
+  color: var(--gray-color);
+}
+.pricing .logo {
+  filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
+}
+.pricing .pricing--content-all {
+  margin: 32px auto;
+}
+.pricing .pricing--content-all .pricingTable {
+  background: #fff;
+  text-align: center;
+  padding: 0 0 35px;
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.pricing .pricing--content-all .pricingTable .pricingTable-header {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 25px 25px 60px;
+  margin: 0 -40px 35px;
+  border-radius: 0 0 50% 50%/0 0 80% 80%;
+  position: relative;
+  z-index: 1;
+}
+.pricing .pricing--content-all .pricingTable .title {
+  font-size: 43px;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 0 0 20px;
+}
+.pricing .pricing--content-all .pricingTable ul {
+  text-align: left;
+  margin-left: 30px;
+}
+.pricing .pricing--content-all .pricingTable ul li {
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 35px;
+  padding: 0 15px 0 30px;
+  margin: 0 0 10px;
+  position: relative;
+}
+.pricing .pricing--content-all .pricingTable .pricing--button:hover {
+  color: var(--primary-color);
+  background: #091b2b;
+  font-style: italic;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.pricingTable .pricingTable-header:before {
+  content: "";
+  background-color: #091b2b;
+  border-radius: inherit;
+  position: absolute;
+  left: 35px;
+  right: 35px;
+  bottom: 35px;
+  top: 0;
+  z-index: -1;
+}
+
+.pricingTable .price-value .amount {
+  font-size: 43px;
+  font-weight: 200;
+  line-height: 45px;
+  display: block;
+}
+
+.pricingTable .duration {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pricingTable .pricing-content li:before {
+  content: "\f00c";
+  color: #3a7b12;
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.pricingTable .pricing-content li.disable:before {
+  content: "\f00d";
+  color: #f8444a;
+}
+
+.pricingTable.red {
+  --primary-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 990px) {
+  .pricingTable {
+    margin: 0 0 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
