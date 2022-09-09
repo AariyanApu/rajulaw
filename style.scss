@@ -79,7 +79,6 @@ h1 {
 h2 {
   margin: 0 auto 10px auto;
   font-family: "Playfair Display";
-
 }
 
 ul {
@@ -498,7 +497,7 @@ header {
     }
   }
   .success--counter-content {
-  font-family: "Playfair Display";
+    font-family: "Playfair Display";
 
     border-radius: 3%;
     background-color: var(--white-color);
@@ -645,6 +644,8 @@ header {
 
   @media only screen and (max-width: 767px) {
     text-align: center;
+    background-size: auto;
+    background-attachment: scroll;
   }
 }
 
