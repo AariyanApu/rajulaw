@@ -542,13 +542,21 @@ header .header-text-box {
 .footer {
   font-family: "Playfair Display";
   padding: 40px 0 10px 0;
+  color: var(--white-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/usFlag.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .footer h2 {
+  margin-bottom: 48px;
+}
+.footer h3 {
   font-size: 130%;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  .footer h2 {
+  .footer h3 {
     font-size: 110%;
     margin-top: 10px;
   }
@@ -564,7 +572,7 @@ header .header-text-box {
 }
 .footer a {
   font-size: 80%;
-  color: var(--gray-color);
+  color: var(--white-color);
   transition: all 0.2s ease-in-out;
 }
 .footer a:hover {
@@ -583,12 +591,20 @@ header .header-text-box {
 .footer li a {
   font-size: 200%;
 }
-.footer .social--media {
-  text-align: center;
+.footer .map {
+  margin-left: 10%;
 }
 @media only screen and (max-width: 767px) {
-  .footer .social--media {
-    text-align: left;
+  .footer .map {
+    margin-left: 0%;
+  }
+}
+.footer .scale--icon {
+  color: var(--white-color) !important;
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    text-align: center;
   }
 }
 

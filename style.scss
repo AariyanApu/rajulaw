@@ -574,10 +574,24 @@ header {
 .footer {
   font-family: "Playfair Display";
   padding: 40px 0 10px 0;
+  color: var(--white-color);
+
+  background-image: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(img/usFlag.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(img/usFlag.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
   h2 {
+    margin-bottom: 48px;
+  }
+  h3 {
     font-size: 130%;
-
     margin: 0;
     @media only screen and (max-width: 767px) {
       font-size: 110%;
@@ -596,7 +610,7 @@ header {
 
   a {
     font-size: 80%;
-    color: var(--gray-color);
+    color: var(--white-color);
     transition: all 0.2s ease-in-out;
     &:hover {
       color: var(--secondary-color);
@@ -615,11 +629,18 @@ header {
     }
   }
 
-  .social--media {
-    text-align: center;
+  .map {
+    margin-left: 10%;
     @media only screen and (max-width: 767px) {
-      text-align: left;
+      margin-left: 0%;
     }
+  }
+  .scale--icon {
+    color: var(--white-color) !important;
+  }
+
+  @media only screen and (max-width: 767px) {
+    text-align: center;
   }
 }
 
