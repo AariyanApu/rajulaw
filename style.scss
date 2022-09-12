@@ -178,9 +178,13 @@ li {
 }
 .faq--button {
   text-align: left;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 90%;
   color: var(--gray-color);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 // * ------------- Logo --------------
@@ -512,17 +516,31 @@ header {
 // *-----------  TESTIMONIALS --------
 
 .testimonials {
-  img:first-child {
-    filter: brightness(20%);
-  }
+  margin: 0;
 
-  img:last-child {
+  background-color: var(--lightGray-color);
+  background-image: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(img/usFlag.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/usFlag.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  img {
     border-radius: 100%;
-    width: 60px;
+    width: 80px;
 
     @media only screen and (max-width: 767px) {
       width: 50px;
     }
+  }
+  h2 {
+    color: var(--white-color);
+    margin-top: 32px;
   }
 
   h5 {
@@ -539,8 +557,11 @@ header {
       font-size: 60%;
     }
   }
+  .carousel-inner {
+    height: 300px;
+  }
   .carousel--items {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     @media only screen and (max-width: 767px) {
       width: 100%;
@@ -548,7 +569,27 @@ header {
   }
   .carousel-caption {
     padding: 0;
-    margin: 0;
+    margin: 56px 0 0 0;
+    top: 50%;
+  }
+  .container {
+    backdrop-filter: blur(8px);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  .scale--icon {
+    &::before {
+      background-color: var(--white-color);
+    }
+    &:after {
+      background-color: var(--white-color);
+    }
+    i {
+      color: var(--white-color);
+    }
   }
 }
 
@@ -579,25 +620,23 @@ header {
   padding: 40px 0 10px 0;
   color: var(--white-color);
 
+  background-color: var(--lightGray-color);
+
   background-image: -webkit-linear-gradient(
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8)
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
     ),
     url(img/usFlag.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(img/usFlag.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 
-  h2 {
-    margin-bottom: 48px;
-  }
   h3 {
-    font-size: 130%;
+    font-size: 150%;
     margin: 0;
     @media only screen and (max-width: 767px) {
-      font-size: 110%;
       margin-top: 10px;
     }
   }
@@ -638,14 +677,31 @@ header {
       margin-left: 0%;
     }
   }
-  .scale--icon {
-    color: var(--white-color) !important;
-  }
 
   @media only screen and (max-width: 767px) {
     text-align: center;
     background-size: auto;
     background-attachment: scroll;
+  }
+  .container {
+    backdrop-filter: blur(8px);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  .scale--icon {
+    margin-bottom: 48px;
+    &::before {
+      background-color: var(--white-color);
+    }
+    &:after {
+      background-color: var(--white-color);
+    }
+    i {
+      color: var(--white-color);
+    }
   }
 }
 
@@ -682,6 +738,20 @@ header {
     a {
       &:hover {
         color: var(--secondary-color);
+      }
+    }
+  }
+  .footer{
+    margin-top: 40px;
+    .social--media {
+      li{
+
+        a {
+          color: var(--white-color);
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
       }
     }
   }
@@ -740,11 +810,30 @@ header {
       contrast(100%);
   }
 
-  .social--media {
-    text-align: center;
+  .footer {
+    margin-top: 40px;
+    text-align: left;
+
     a {
-      &:hover {
-        color: var(--secondary-color);
+      color: var(--white-color);
+    }
+
+    h3 {
+      font-size: 130%;
+      margin: 0;
+      @media only screen and (max-width: 767px) {
+        margin-top: 10px;
+      }
+    }
+    .social--media {
+      li{
+
+        a {
+          color: var(--white-color);
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
       }
     }
   }
@@ -808,6 +897,16 @@ header {
           background: #091b2b;
           font-style: italic;
           text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+  .social--media {
+    li {
+      a {
+        color: var(--white-color);
+        &:hover {
+          color: var(--secondary-color);
         }
       }
     }

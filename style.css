@@ -181,9 +181,13 @@ li {
 
 .faq--button {
   text-align: left;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 90%;
   color: var(--gray-color);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .logo {
@@ -479,17 +483,26 @@ header .header-text-box {
   }
 }
 
-.testimonials img:first-child {
-  filter: brightness(20%);
+.testimonials {
+  margin: 0;
+  background-color: var(--lightGray-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/usFlag.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-.testimonials img:last-child {
+.testimonials img {
   border-radius: 100%;
-  width: 60px;
+  width: 80px;
 }
 @media only screen and (max-width: 767px) {
-  .testimonials img:last-child {
+  .testimonials img {
     width: 50px;
   }
+}
+.testimonials h2 {
+  color: var(--white-color);
+  margin-top: 32px;
 }
 .testimonials h5 {
   font-size: 120%;
@@ -509,8 +522,11 @@ header .header-text-box {
     font-size: 60%;
   }
 }
+.testimonials .carousel-inner {
+  height: 300px;
+}
 .testimonials .carousel--items {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 767px) {
@@ -520,7 +536,26 @@ header .header-text-box {
 }
 .testimonials .carousel-caption {
   padding: 0;
-  margin: 0;
+  margin: 56px 0 0 0;
+  top: 50%;
+}
+.testimonials .container {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.testimonials .scale--icon::before {
+  background-color: var(--white-color);
+}
+.testimonials .scale--icon:after {
+  background-color: var(--white-color);
+}
+.testimonials .scale--icon i {
+  color: var(--white-color);
 }
 
 .art--tech {
@@ -545,21 +580,18 @@ header .header-text-box {
   font-family: "Playfair Display";
   padding: 40px 0 10px 0;
   color: var(--white-color);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/usFlag.png);
+  background-color: var(--lightGray-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/usFlag.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-.footer h2 {
-  margin-bottom: 48px;
-}
 .footer h3 {
-  font-size: 130%;
+  font-size: 150%;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
   .footer h3 {
-    font-size: 110%;
     margin-top: 10px;
   }
 }
@@ -601,15 +633,33 @@ header .header-text-box {
     margin-left: 0%;
   }
 }
-.footer .scale--icon {
-  color: var(--white-color) !important;
-}
 @media only screen and (max-width: 767px) {
   .footer {
     text-align: center;
     background-size: auto;
     background-attachment: scroll;
   }
+}
+.footer .container {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.footer .scale--icon {
+  margin-bottom: 48px;
+}
+.footer .scale--icon::before {
+  background-color: var(--white-color);
+}
+.footer .scale--icon:after {
+  background-color: var(--white-color);
+}
+.footer .scale--icon i {
+  color: var(--white-color);
 }
 
 .credit--area {
@@ -636,6 +686,15 @@ header .header-text-box {
   filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
 }
 .faq .social--media a:hover {
+  color: var(--secondary-color);
+}
+.faq .footer {
+  margin-top: 40px;
+}
+.faq .footer .social--media li a {
+  color: var(--white-color);
+}
+.faq .footer .social--media li a:hover {
   color: var(--secondary-color);
 }
 
@@ -684,10 +743,26 @@ header .header-text-box {
 .team .logo {
   filter: invert(10%) sepia(10%) saturate(3207%) hue-rotate(130deg) contrast(100%);
 }
-.team .social--media {
-  text-align: center;
+.team .footer {
+  margin-top: 40px;
+  text-align: left;
 }
-.team .social--media a:hover {
+.team .footer a {
+  color: var(--white-color);
+}
+.team .footer h3 {
+  font-size: 130%;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  .team .footer h3 {
+    margin-top: 10px;
+  }
+}
+.team .footer .social--media li a {
+  color: var(--white-color);
+}
+.team .footer .social--media li a:hover {
   color: var(--secondary-color);
 }
 
@@ -744,6 +819,12 @@ header .header-text-box {
   background: #091b2b;
   font-style: italic;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5);
+}
+.pricing .social--media li a {
+  color: var(--white-color);
+}
+.pricing .social--media li a:hover {
+  color: var(--secondary-color);
 }
 
 .pricingTable .pricingTable-header:before {
