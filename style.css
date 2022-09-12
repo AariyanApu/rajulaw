@@ -292,10 +292,7 @@ li {
   display: inline-block;
 }
 .sticky .mobile-nav-icon {
-  margin: 10px 5px 0 auto;
-}
-.sticky .mobile-nav-icon i {
-  color: var(--gray-color);
+  margin: 10px 15px 0 auto;
 }
 
 .sticky-nav-extra {
