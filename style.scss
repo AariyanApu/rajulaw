@@ -297,8 +297,6 @@ li {
   }
   .mobile-nav-icon {
     margin: 10px 15px 0 auto;
-
-  
   }
 }
 
@@ -515,7 +513,6 @@ header {
 
 .testimonials {
   margin: 0;
-
   background-color: var(--lightGray-color);
   background-image: -webkit-linear-gradient(
       rgba(0, 0, 0, 0.7),
@@ -531,6 +528,7 @@ header {
   img {
     border-radius: 100%;
     width: 80px;
+    margin-top: 16px;
 
     @media only screen and (max-width: 767px) {
       width: 50px;
@@ -589,6 +587,12 @@ header {
       color: var(--white-color);
     }
   }
+
+  @media only screen and (max-width: 767px) {
+    background-size: auto;
+    background-attachment: scroll;
+  }
+
 }
 
 // *---------------  ART & TECH ---------------
@@ -701,6 +705,10 @@ header {
       color: var(--white-color);
     }
   }
+  @media only screen and (max-width: 767px) {
+    background-size: auto;
+    background-attachment: scroll;
+  }
 }
 
 .credit--area {
@@ -739,11 +747,10 @@ header {
       }
     }
   }
-  .footer{
+  .footer {
     margin-top: 40px;
     .social--media {
-      li{
-
+      li {
         a {
           color: var(--white-color);
           &:hover {
@@ -824,8 +831,7 @@ header {
       }
     }
     .social--media {
-      li{
-
+      li {
         a {
           color: var(--white-color);
           &:hover {

@@ -491,6 +491,7 @@ header .header-text-box {
 .testimonials img {
   border-radius: 100%;
   width: 80px;
+  margin-top: 16px;
 }
 @media only screen and (max-width: 767px) {
   .testimonials img {
@@ -553,6 +554,12 @@ header .header-text-box {
 }
 .testimonials .scale--icon i {
   color: var(--white-color);
+}
+@media only screen and (max-width: 767px) {
+  .testimonials {
+    background-size: auto;
+    background-attachment: scroll;
+  }
 }
 
 .art--tech {
@@ -657,6 +664,12 @@ header .header-text-box {
 }
 .footer .scale--icon i {
   color: var(--white-color);
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    background-size: auto;
+    background-attachment: scroll;
+  }
 }
 
 .credit--area {
