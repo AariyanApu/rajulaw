@@ -606,6 +606,7 @@ header .header-text-box {
 .recent--blog .card img {
   width: 350px;
   height: 230px;
+  margin: 0 auto;
 }
 
 .footer {
