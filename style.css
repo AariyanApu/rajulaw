@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Playfair+Display:wght@600&display=swap");
 :root {
   --primary-color: #3b7197;
   --secondary-color: #4a8db7;
@@ -84,7 +84,9 @@ h1 {
 
 h2 {
   margin: 0 auto 10px auto;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-weight: 600;
 }
 
 ul {
@@ -188,6 +190,11 @@ li {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+}
+
+.blog--button {
+  padding: 4px 16px;
+  margin: 16px 0;
 }
 
 .logo {
@@ -578,6 +585,27 @@ header .header-text-box {
 }
 .art--tech .card {
   margin-bottom: 30px;
+}
+
+.recent--blog h3 {
+  font-family: "Playfair Display";
+  text-transform: uppercase;
+  margin: 16px 0;
+}
+@media only screen and (max-width: 767px) {
+  .recent--blog h3 {
+    font-size: 140%;
+  }
+}
+.recent--blog .card {
+  background-color: var(--lightGray-color);
+}
+.recent--blog .card h4 {
+  font-family: "Playfair Display";
+}
+.recent--blog .card img {
+  width: 350px;
+  height: 230px;
 }
 
 .footer {
